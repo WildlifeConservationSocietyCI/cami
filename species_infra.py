@@ -13,16 +13,16 @@ representing all infrastructure features within that species' range classified b
 """,
                                  formatter_class=RawDescriptionHelpFormatter)
 parser.add_argument('-s', '--dir_species',
-                    default='C:/Users/kfisher/Documents/Asia/CAMI_species/work/data/working/post-workshop/CAMI_170616'
-                            '.gdb/species',
+                    default='C:/Users/kfisher/Documents/Asia/CAMI_species/work/data/working/post-workshop/2017atlas'
+                            '/CAMI_170927.gdb/species',
                     help=u'Absolute path to workspace containing species feature classes.')
 parser.add_argument('-i', '--dir_infra',
-                    default='C:/Users/kfisher/Documents/Asia/CAMI_species/work/data/working/post-workshop/CAMI_170616'
-                            '.gdb/infrastructure',
+                    default='C:/Users/kfisher/Documents/Asia/CAMI_species/work/data/working/post-workshop/2017atlas'
+                            '/CAMI_170927.gdb/infrastructure',
                     help=u'Absolute path to workspace containing infrastructure feature classes.')
 parser.add_argument('-o', '--dir_output',
-                    default='C:/Users/kfisher/Documents/Asia/CAMI_species/work/data/working/post-workshop/species_infra'
-                            '.gdb',
+                    default='C:/Users/kfisher/Documents/Asia/CAMI_species/work/data/working/post-workshop/2017atlas'
+                            '/species_infra.gdb',
                     help=u'Absolute path to workspace to hold intersected species/infrastructure feature classes.')
 args = parser.parse_args()
 dir_species = args.dir_species.lstrip().rstrip(' /\\')
@@ -30,9 +30,6 @@ dir_infra = args.dir_infra.lstrip().rstrip(' /\\')
 dir_output = args.dir_output.lstrip().rstrip(' /\\')
 dir_scratch = 'in_memory'
 
-# dir_species = arcpy.GetParameterAsText(0)
-# dir_infra = arcpy.GetParameterAsText(1)
-# dir_output = arcpy.GetParameterAsText(2)
 BARRIER_FIELD = 'barrier'  # not a barrier, partial barrier, complete barrier, unknown
 SPECIES_FIELD = 'species'
 RCTEMPLAYER = 'rc_temp'

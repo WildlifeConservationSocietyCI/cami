@@ -12,30 +12,30 @@ Iterate over list of species and clip the specified 'total' infrastructure by it
 """,
                                  formatter_class=RawDescriptionHelpFormatter)
 parser.add_argument('-s', '--dir_species',
-                    default='C:/Users/kfisher/Documents/Asia/CAMI_species/work/data/working/post-workshop/CAMI_170616'
-                            '.gdb/species',
+                    default='C:/Users/kfisher/Documents/Asia/CAMI_species/work/data/working/post-workshop/2017atlas'
+                            '/CAMI_170927.gdb/species',
                     help=u'Absolute path to workspace containing species feature classes.')
 parser.add_argument('-i', '--infra_fc',
-                    # default='C:/Users/kfisher/Documents/Asia/CAMI_species/work/data/raw/infrastructure/roads'
-                    #         '/OSM_roads/OSM.gdb/OSM_RoadsFinal',
-                    # default='C:/Users/kfisher/Documents/Asia/CAMI_species/work/data/raw/infrastructure/railroads'
-                    #         '/OSM_Railroads/OSM_Asia_Railroads.shp',
-                    default='C:/Users/kfisher/Documents/Asia/CAMI_species/work/data/working/post-workshop/CAMI_170616'
-                            '.gdb/infrastructure/fence',
-                    # default='C:/Users/kfisher/Documents/Asia/CAMI_species/work/data/working/post-workshop/CAMI_170616'
-                    #         '.gdb/infrastructure/pipeline',
+                    # default='C:/Users/kfisher/Documents/Asia/CAMI_species/work/data/working/post-workshop/2017atlas'
+                    #         '/CAMI_170927.gdb/infrastructure/road_total',
+                    # default='C:/Users/kfisher/Documents/Asia/CAMI_species/work/data/working/post-workshop/2017atlas'
+                    #         '/CAMI_170927.gdb/infrastructure/railroad_total',
+                    # default='C:/Users/kfisher/Documents/Asia/CAMI_species/work/data/working/post-workshop/2017atlas'
+                    #         '/CAMI_170927.gdb/infrastructure/fence',
+                    default='C:/Users/kfisher/Documents/Asia/CAMI_species/work/data/working/post-workshop/2017atlas'
+                            '/CAMI_170927.gdb/infrastructure/pipeline',
                     help=u'Absolute path to infrastructure feature class to be clipped.')
 parser.add_argument('-o', '--dir_output',
-                    default='C:/Users/kfisher/Documents/Asia/CAMI_species/work/data/working/post-workshop/species_infra'
-                            '.gdb/total',
+                    default='C:/Users/kfisher/Documents/Asia/CAMI_species/work/data/working/post-workshop/2017atlas'
+                            '/species_infra.gdb/total',
                     help=u'Absolute path to workspace to hold intersected species/infrastructure feature classes.')
 args = parser.parse_args()
 dir_species = args.dir_species.lstrip().rstrip(' /\\')
 infra_fc = args.infra_fc.lstrip().rstrip(' /\\')
 infra = infra_fc.split('/')[-1].split('.')[0]
 dir_output = args.dir_output.lstrip().rstrip(' /\\')
-dir_scratch = 'C:/Users/kfisher/Documents/Asia/CAMI_species/work/data/working/post-workshop/species_infra.gdb/scratch' \
-              ''  # 'in_memory'
+dir_scratch = 'C:/Users/kfisher/Documents/Asia/CAMI_species/work/data/working/post-workshop/2017atlas' \
+              '/species_infra.gdb/scratch'  # 'in_memory'
 
 SPECIES_FIELD = 'species'
 RCTEMPLAYER = 'rc_temp'
