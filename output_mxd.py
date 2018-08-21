@@ -2,8 +2,8 @@ import os
 import arcpy
 
 field_name = 'species'
-dir_mxd = 'C:/Users/kfisher/Documents/Asia/CAMI_species/work/maps/atlas_templates'
-dir_output = 'C:/Users/kfisher/Documents/Asia/CAMI_species/work/maps/species_by_infra'
+dir_mxd = 'D:/cami/delivered/atlas_templates'
+dir_output = 'D:/cami/delivered/products/species_by_infra'
 NOTE_SPECIES = [u'Ovis ammon', u'Panthera uncia']
 SHOW_EXCLUDED_AREA_SPECIES = [u'Camelus bactrianus']
 INFRA_TOTALS = {u'canal': u'canal',
